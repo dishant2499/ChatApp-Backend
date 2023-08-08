@@ -10,13 +10,13 @@ const { Server } = require("socket.io");
 const dotenv= require('dotenv')
 
 const otpGenerator = require('otp-generator')
-const {logincontoller} = require( "./controller/logincontoller")
-const {messagecontoller} = require( "./controller/messageController")
+const {logincontoller} = require( "../controller/logincontoller")
+const {messagecontoller} = require( "../controller/messageController")
 
-const {SocketController} = require( "./controller/SocketController")
+const {SocketController} = require( "../controller/SocketController")
 
-const  {authentication} = require( "./controller/authentication")
-const  {connect} = require( "./controller/connection")
+const  {authentication} = require( "../controller/authentication")
+const  {connect} = require( "../controller/connection")
 
 
 dotenv.config();

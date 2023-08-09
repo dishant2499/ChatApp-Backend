@@ -46,7 +46,7 @@ app.post("/login",logincontoller)
 
 app.post("/form",upload.single('myFile'),(req,res)=>{
  console.log("req",req.file)
-   res.status(200).json({res:`http://localhost:4000/${req.file.path}`,type:req.file.mimetype})
+   res.status(200).json({res:`https://chatapp-backend-qd3r.onrender.com/${req.file.path}`,type:req.file.mimetype})
 })
 
 app.get("/message",messagecontoller)

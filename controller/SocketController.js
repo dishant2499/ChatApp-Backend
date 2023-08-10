@@ -5,9 +5,9 @@ const Message = require("../schema/messageSchema")
 const socketIo = require('socket.io');
 
 
-const io = socketIo(4001,{
+const io = socketIo(3000,{
     cors: {
-        origin:"https://chatapp-backend-qd3r.onrender.com",
+        origin:"https://chat-app-front-end-o3re-ejg0tg8mx-dishant2499.vercel.app",
         credentials: true
     }
 });

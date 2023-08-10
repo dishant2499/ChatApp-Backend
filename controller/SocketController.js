@@ -6,7 +6,7 @@ const Message = require("../schema/messageSchema")
 
 const io = new Server(4001,{
     cors: {
-        origin: "*",
+        origin: "https://chatapp-backend-qd3r.onrender.com",
         allowedHeaders: ["my-custom-header"],
         credentials: true
     }

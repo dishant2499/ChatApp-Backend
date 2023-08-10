@@ -2,11 +2,18 @@ const express = require('express');
 const { Server } = require("socket.io");
 const multer = require("multer");
 const Message = require("../schema/messageSchema")
+const socketIo = require('socket.io');
+const http = require('http');
 
+const app = express();
 
-const io = new Server(4001,{
+const server = http.createServer(app);
+
+// Create a Socket.io instance by passing the HTTP server
+
+const io = socketIo(server,{
     cors: {
-        origin: "https://chatapp-backend-qd3r.onrender.com",
+        origin:"https://chatapp-backend-qd3r.onrender.com",
         allowedHeaders: ["my-custom-header"],
         credentials: true
     }
